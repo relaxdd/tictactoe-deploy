@@ -1,0 +1,11 @@
+sudo apt update && sudo apt upgrade
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo apt install git
+git clone https://github.com/relaxdd/tictactoe-deploy.git
+cd tictactoe-deploy
+cat > .env
+PORT=80
+STATIC=public
+ctrl+d
+node app.js --production --port=80
